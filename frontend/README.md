@@ -314,4 +314,10 @@ export default defineConfig({
 
 # Vue TypeScript Setup + Django
 
-## 1. 
+## 1. Install required dependencies:
+```bash
+npm install --save-dev @types/node
+```
+```bash
+npm install --save-dev @vitejs/plugin-vue
+```
