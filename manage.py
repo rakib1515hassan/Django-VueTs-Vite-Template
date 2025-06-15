@@ -2,6 +2,11 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+import environ
+
+# Initialize environment variables
+env = environ.Env()
+environ.Env.read_env()  # Read.env file
 
 
 def main():
