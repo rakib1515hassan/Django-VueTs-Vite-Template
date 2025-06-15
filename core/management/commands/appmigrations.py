@@ -7,7 +7,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         # get all apps name
-        from card_boxes.settings import INSTALLED_APPS
+        from config.settings import INSTALLED_APPS
 
         apps = [app for app in INSTALLED_APPS if app.startswith("apps")]
 

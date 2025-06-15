@@ -3,7 +3,7 @@ from shutil import rmtree
 
 from django.core.management.base import BaseCommand
 
-from card_boxes.settings import BASE_DIR
+from config.settings import BASE_DIR
 
 
 class Command(BaseCommand):
