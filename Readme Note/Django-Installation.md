@@ -61,11 +61,12 @@ django-admin startproject config .
 
 
 
-## 6. Setup Django-Extensions
+## 6. Setup Django-Extensions and Djanog-Cleanup
 ```bash
 INSTALLED_APPS = [
     ...
     'django_extensions',
+    'django_cleanup.apps.CleanupConfig',
     ...
 ]
 ```
