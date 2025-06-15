@@ -307,3 +307,11 @@ export default defineConfig({
 },
 "editor.inlineSuggest.enabled": true
 ```
+
+
+
+
+
+# Vue TypeScript Setup + Django
+
+## 1. 
