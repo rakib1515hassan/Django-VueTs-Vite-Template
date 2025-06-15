@@ -34,9 +34,9 @@ ALLOWED_HOSTS = env.list(
 
 
 
-##! Cors Allowd
+##! CORS Headers Allowd
 ## Allow All Origins (Not Recommended for Production)
-CORS_ALLOW_ALL_ORIGINS = env.bool('CORS_ALLOW_ALL_ORIGINS', default=False) ## ⚠️ Only for development!
+CORS_ALLOW_ALL_ORIGINS = env.bool('CORS_ALLOW_ALL_ORIGINS', default=False) ## ⚠️ Only for development! (True)
 
 if not CORS_ALLOW_ALL_ORIGINS:
     CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS', default=[
@@ -53,13 +53,13 @@ if not CORS_ALLOW_ALL_ORIGINS:
 
 ## For Custom Apps Creat (apps/my_apps )
 CUSTOM_APPS = [
-    # 'apps.core.apps.CoreConfig',                # core
-    # 'apps.users.apps.UsersConfig',              # users
+    'core.apps.CoreConfig',                # core
+    'apps.users.apps.UsersConfig',         # users
 ]
 
 ## For Third Party Apps
 THIRD_PARTY_APPS = [
-
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 ## Deffault Apps + Django Apps
@@ -71,6 +71,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
+    'rest_framework',
+    'django_filters',
+    'rest_framework_simplejwt',
     'corsheaders',
     
 ] + CUSTOM_APPS + THIRD_PARTY_APPS
@@ -91,8 +94,18 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+
+##! Custom User Model
+AUTH_USER_MODEL = 'users.User'
+swappable = 'AUTH_USER_MODEL'
+
+
+##! URL Config
 ROOT_URLCONF = 'config.urls'
 
+
+##! Template Config
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -112,6 +125,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -216,3 +230,15 @@ REMEMBER_ME_EXPIRY = 60 * 60 * 24 * 30   ## 30 days in seconds
 OTP_TIMEOUT = 3                          ## OTP timeout set 3 minutes
 
 DEFAULT_PAGINATION_LIMIT = 20            ## Deffault Pagination Limit
+
+
+
+
+##! ================= Package ===================================
+from packege.drf import *
+from packege.jwt import *
+
+
+
+##! ================= Service ===================================
+# from service.email import *

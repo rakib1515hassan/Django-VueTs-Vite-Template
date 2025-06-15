@@ -18,10 +18,14 @@ source env/bin/activate
 ```
 
 
+
+
 ## 3. Deactivate Environment
 ```bash
 deactivate
 ```
+
+
 
 
 ## 4. Install Django and Others Importent package
@@ -29,7 +33,16 @@ deactivate
 pip install django
 ```
 ```bash
-pip install pillow
+python -m pip install Pillow
+```
+```bash
+python -m pip install requests
+```
+```bash
+pip install django-extensions
+```
+```bash
+pip install django-cleanup
 ```
 ```bash
 pip install python-dotenv
@@ -39,13 +52,27 @@ python -m pip install django-environ
 ```
 
 
+
+
 ## 5. Create a New Django Project
 ```bash
 django-admin startproject config .
 ```
 
 
-## 6. Run the Development Server
+
+## 6. Setup Django-Extensions
+```bash
+INSTALLED_APPS = [
+    ...
+    'django_extensions',
+    ...
+]
+```
+
+
+
+## 7. Run the Development Server
 ```bash
 python manage.py runserver
 ```
