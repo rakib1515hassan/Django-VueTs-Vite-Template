@@ -26,8 +26,9 @@ pip install djangorestframework-simplejwt
 ```bash
 INSTALLED_APPS = [
     ...
-    'rest_framework',  # Add this for DRF
-    'django_filters',  # Add this for Django Filter
+    'rest_framework',            # Add this for DRF
+    'django_filters',            # Add this for Django Filter
+    'rest_framework_simplejwt',  # Add Simple JWT
     'corsheaders',
     ...
 ]
