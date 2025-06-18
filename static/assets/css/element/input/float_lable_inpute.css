@@ -1,0 +1,240 @@
+/* Grid Layout System */
+.grid-input-container {
+  display: grid;
+  /* gap: 20px; */
+  /* row-gap: 20px; */
+  column-gap: 20px;
+  grid-auto-rows: minmax(60px, auto);
+  grid-template-columns: repeat(1, 1fr); /* Default for mobile */
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+}
+
+/* Responsive Grid Columns */
+@media (min-width: 576px) {
+  .grid-input-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-input-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-input-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Grid Column Span Utilities */
+.col-span-1 {
+  grid-column: span 1;
+}
+.col-span-2 {
+  grid-column: span 2;
+}
+.col-span-3 {
+  grid-column: span 3;
+}
+.col-span-4 {
+  grid-column: span 4;
+}
+
+/* Grid Row Span Utilities */
+.row-span-1 {
+  grid-row: span 1;
+}
+.row-span-2 {
+  grid-row: span 2;
+}
+.row-span-3 {
+  grid-row: span 3;
+}
+
+/* Mobile Overrides */
+@media (max-width: 575.98px) {
+  .col-span-2,
+  .col-span-3,
+  .col-span-4 {
+    grid-column: span 1 !important;
+  }
+
+  .row-span-2,
+  .row-span-3 {
+    grid-row: span 1 !important;
+  }
+}
+
+/* Custom Input Group Styles */
+.custom-input-group {
+  position: relative;
+  margin: 10px 0;
+  min-width: 120px;
+}
+
+.custom-input-group input,
+.custom-input-group textarea {
+  width: 100%;
+  /* padding: 10px 10px 10px 10px; */
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #dbdde1;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+  font-family: inherit;
+  background-color: white;
+}
+
+.custom-input-group label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: white;
+  color: #888;
+  font-size: 16px;
+  padding: 0 4px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.custom-input-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Focused Input Styles */
+.custom-input-group input:focus,
+.custom-input-group textarea:focus {
+  border-color: #372aac;
+}
+
+/* Floating Label Styles */
+.custom-input-group input:focus + label,
+.custom-input-group input:not(:placeholder-shown) + label,
+.custom-input-group input.has-value + label,
+.custom-input-group input:disabled:not([value=""]) + label,
+.custom-input-group input[readonly]:not([value=""]) + label,
+.custom-input-group textarea:focus + label,
+.custom-input-group textarea:not(:placeholder-shown) + label,
+.custom-input-group textarea.has-value + label,
+.custom-input-group textarea:disabled:not(:empty) + label,
+.custom-input-group textarea[readonly]:not(:empty) + label {
+  top: -10px;
+  left: 8px;
+  font-size: 12px;
+  color: #372aac;
+}
+
+/* Disabled Input Styles */
+.custom-input-group input:disabled,
+.custom-input-group textarea:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  border-color: #e0e0e0;
+}
+
+/* ✅ Error state */
+.custom-input-group.error input,
+.custom-input-group.error textarea {
+  border-color: red;
+}
+
+.custom-input-group.error input:focus + label,
+.custom-input-group.error input:not(:placeholder-shown) + label,
+.custom-input-group.error textarea:focus + label,
+.custom-input-group.error textarea:not(:placeholder-shown) + label {
+  color: red;
+}
+
+/* ✅ Success state */
+.custom-input-group.success input,
+.custom-input-group.success textarea {
+  border-color: green;
+}
+
+.custom-input-group.success input:focus + label,
+.custom-input-group.success input:not(:placeholder-shown) + label,
+.custom-input-group.success textarea:focus + label,
+.custom-input-group.success textarea:not(:placeholder-shown) + label {
+  color: green;
+}
+
+/* Normal Inpute */
+.custom-input {
+  width: 100%;
+  min-width: 150px;
+  /* padding: 10px 10px 10px 10px; */
+  padding: 8px;
+  font-size: 12px;
+  border: 2px solid #dbdde1;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+  font-family: inherit;
+  background-color: white;
+}
+.custom-input:focus {
+  border-color: #372aac;
+}
+
+.custom-input.error {
+  border-color: red;
+}
+
+/* Example:- */
+/* 
+<div class="grid-input-container">
+                
+    <div class="custom-input-group">
+        <input type="text" id="input1" required />
+        <label for="input1">First Name</label>
+    </div>
+
+    <div class="custom-input-group">
+        <input type="text" id="input2" required />
+        <label for="input2">Last Name</label>
+    </div>
+
+    <div class="custom-input-group col-span-2">
+        <input type="text" id="input3" required />
+        <label for="input3">Full Address (2 Columns)</label>
+    </div>
+
+    <div class="custom-input-group row-span-2">
+        <textarea id="input4" required style="height: 100%; width: 100%;"></textarea>
+        <label for="input4">Comment (2 Rows)</label>
+    </div>
+
+    <div class="custom-input-group">
+        <input type="text" id="input5" required />
+        <label for="input5">Email</label>
+    </div>
+
+    <div class="custom-input-group">
+        <input type="text" id="input6" required />
+        <label for="input6">Phone</label>
+    </div>
+
+    <div class="custom-input-group">
+        <input type="text" v-model="f_name" placeholder=" " id="input1" readonly  />
+        <label for="input1">First Name</label>
+    </div>
+    <div class="custom-input-group">
+        <input type="text" v-model="l_name" placeholder=" " id="input1" disabled />
+        <label for="input1">Last Name</label>
+    </div>
+    <div class="custom-input-group">
+        <input type="text" :value="[[age]]" id="input1" readonly />
+        <label for="input1">Age</label>
+    </div>
+    <div class="custom-input-group">
+        <input type="text" :value="[[city]]" id="input1" disabled />
+        <label for="input1">City</label>
+    </div>
+
+</div>
+*/
+

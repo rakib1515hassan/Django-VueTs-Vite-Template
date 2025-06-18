@@ -20,9 +20,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DJANGO_DEBUG', default=False)
-
-
-
+LIVE  = env.bool('LIVE', default=False)
 
 
 ##! Allow Hosts
@@ -55,6 +53,7 @@ if not CORS_ALLOW_ALL_ORIGINS:
 CUSTOM_APPS = [
     'core.apps.CoreConfig',                # core
     'apps.users.apps.UsersConfig',         # users
+    'apps.dashboard.apps.DashboardConfig', # dashboard
 ]
 
 ## For Third Party Apps
@@ -118,9 +117,13 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'core.context_processors.debug', ## Custom
+                
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
+                ##? Custom Context Processor
             ],
         },
     },
@@ -235,8 +238,8 @@ DEFAULT_PAGINATION_LIMIT = 20            ## Deffault Pagination Limit
 
 
 ##! ================= Package ===================================
-from packege.drf import *
-from packege.jwt import *
+from config.packege.drf import *
+from config.packege.jwt import *
 
 
 

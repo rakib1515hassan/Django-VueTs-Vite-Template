@@ -1,0 +1,133 @@
+/* ✅ Select 2 Inpute Design */
+/* .select2-container .select2-selection--single {
+    height: 42px;
+    border: 2px solid #dbdde1 !important;
+    border-radius: 4px !important;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 40px;
+  } */
+
+/* Select2 Container - Match your grid layout */
+.custom-select2-group {
+    position: relative;
+    margin: 10px 0;
+    min-width: 150px;
+  }
+  
+  /* Permanent Floating Label */
+  .custom-select2-group label {
+    position: absolute;
+    top: -10px !important; /* সবসময় উপরে */
+    left: 8px !important;
+    font-size: 12px !important;
+    color: #888 !important;
+    background: white;
+    padding: 0 4px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  /* Select2 Single Selection */
+  .select2-container .select2-selection--single {
+    /* height: 42px; */
+    height: auto;
+    border: 2px solid #dbdde1 !important;
+    border-radius: 4px !important;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-family: inherit;
+    background-color: white;
+    transition: border-color 0.3s;
+  }
+  
+  /* Select2 Focus State */
+  .select2-container--focus .select2-selection--single {
+    border-color: #372aac !important;
+    outline: none;
+  }
+  
+  /* Select2 Dropdown Arrow */
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    height: 40px;
+    right: 8px;
+  }
+  
+  /* Select2 Dropdown Styles */
+  .select2-dropdown {
+    border: 2px solid #dbdde1 !important;
+    border-radius: 4px !important;
+    font-family: inherit;
+    margin-top: 4px;
+  }
+  
+  /* Select2 Search Field */
+  .select2-search__field {
+    border: 1px solid #dbdde1 !important;
+    border-radius: 4px !important;
+    font-family: inherit;
+    padding: 6px !important;
+  }
+  
+  /* Select2 Options */
+  .select2-results__option {
+    padding: 8px 12px !important;
+  }
+  
+  /* Selected Option in Multiple Select */
+  .select2-selection__choice {
+    background-color: #f5f5f5 !important;
+    border: 1px solid #dbdde1 !important;
+    border-radius: 4px !important;
+    padding: 0 5px !important;
+    font-size: 13px !important;
+  }
+  
+  /* Disabled State */
+  .select2-container--disabled .select2-selection--single {
+    background-color: #f5f5f5 !important;
+    cursor: not-allowed !important;
+    border-color: #e0e0e0 !important;
+  }
+  
+  /* Error State */
+  .custom-select2-group.error .select2-selection--single {
+    border-color: red !important;
+  }
+  
+  .custom-select2-group.error label {
+    color: red !important;
+  }
+  
+  /* Success State */
+  .custom-select2-group.success .select2-selection--single {
+    border-color: green !important;
+  }
+  
+  .custom-select2-group.success label {
+    color: green !important;
+  }
+  
+  /* Make sure Select2 respects grid layout */
+  .grid-input-container .custom-select2-group {
+    height: 100%;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 575.98px) {
+    .select2-container .select2-selection--single {
+      height: 40px;
+      font-size: 13px;
+    }
+  
+    .custom-select2-group label {
+      font-size: 14px;
+    }
+  }
+  

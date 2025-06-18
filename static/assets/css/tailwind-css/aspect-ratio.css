@@ -1,0 +1,15 @@
+/* Aspect Ratio Classes */
+.aspect-auto { aspect-ratio: auto !important; }
+.aspect-square { aspect-ratio: 1 / 1 !important; }
+.aspect-video { aspect-ratio: 16 / 9 !important; }
+
+/* Custom Aspect Ratios */
+.aspect-[2/1] { aspect-ratio: 2 / 1 !important; }
+.aspect-[3/2] { aspect-ratio: 3 / 2 !important; }
+.aspect-[4/3] { aspect-ratio: 4 / 3 !important; }
+.aspect-[21/9] { aspect-ratio: 21 / 9 !important; }
+
+/* For more custom ratios, you can define them like:
+.aspect-[width/height] { aspect-ratio: width / height !important; }
+*/
+

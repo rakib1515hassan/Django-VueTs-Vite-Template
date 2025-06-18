@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Dashboard | {% block title %}{% endblock title %}</title>
+
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+    <link rel="icon" href="{% static 'assets/logo/demo_logo.png' %}" type="image/x-icon" />
+
+    <!-- Fonts and icons -->
+    <script src="{% static 'assets/js/plugin/webfont/webfont.min.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" />
+
+    <script>
+        WebFont.load({
+            google: { families: ["Public Sans:300,400,500,600,700"] },
+            custom: {
+                families: [
+                    "Font Awesome 5 Solid",
+                    "Font Awesome 5 Regular",
+                    "Font Awesome 5 Brands",
+                    "simple-line-icons",
+                ],
+                urls: ["{% static 'assets/css/fonts.min.css' %}"],
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            },
+        });
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/kaiadmin.min.css' %}" />
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="{% static 'assets/css/demo.css' %}" />
+
+
+    <!-- Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Toastr CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+
+    <!-- SweetAlert2 CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+
+    <!-- Customer CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind-css/color.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind-css/mergin.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind-css/padding.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind-css/width.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind-css/height.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind-css/border.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind-css/flex.css' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/tailwind-css/text.css' %}" /> -->
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/tailwind-css/grid.css' %}" /> -->
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind-css/aspect-ratio.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind-css/columns.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind-css/border.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind-css/table.css' %}" />
+
+    <!-- Old Input Design -->
+    <link rel="stylesheet" href="{% static 'assets/css/element/input/float_lable_inpute.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/element/input/static_label_input.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/element/input/select2_inpute.css' %}" />
+
+    <!-- New Input Design -->
+    <link rel="stylesheet" href="{% static 'assets/css/element/input2/inpute.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/element/input2/grid-layout-input.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/element/input2/custom_input.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/element/input2/float_input.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/element/input2/select2.css' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/element/input2/vue-multiselect.css' %}" /> -->
+
+    <link rel="stylesheet" href="{% static 'assets/css/element/button.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/page/details.css' %}" />
+
+    <!-- =========================================================================== -->
+    <!-- ========================( Vue JS Connection )============================== -->
+    {% if live %}
+    <!-- Production build files -->
+    <link rel="stylesheet" href="{% static 'vue/assets/css/style.css' %}">
+    <script type="module" src="{% static 'vue/assets/main.js' %}"></script>
+    {% else %}
+    <!-- Vite Dev Server during development -->
+    <script type="module" src="http://localhost:5173/@vite/client"></script>
+    <script type="module" src="http://localhost:5173/src/main.js"></script>
+    {% endif %}
+
+    <!-- Vue Multiselected -->
+    <link rel="stylesheet" href="{% static 'assets/css/element/vue-multiselect.min.css' %}">
+    <!-- =========================================================================== -->
+
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    {% block styles %}{% endblock styles %}
+</head>
+
+<body>
+    <div id="app" class="wrapper">
+        <!--=================(Sidebar Start) ===================-->
+        <!--====================================================-->
+        {% include 'layouts/partial/sidebar.html' %}
+        <!--=================(Sidebar Start) ===================-->
+        <!--=====================================================-->
+
+
+
+        <div class="main-panel">
+            <!--===============(Header/Navbar Start) ================-->
+            <!--=====================================================-->
+            {% include 'layouts/partial/header.html' %}
+            <!--=================(Header/Navbar End) ================-->
+            <!--=====================================================-->
+
+
+
+
+
+            <div class="container">
+                {% block content %}
+
+
+
+
+
+                {% endblock content %}
+            </div>
+
+
+
+            <!--===================(Footer Start) ===================-->
+            <!--=====================================================-->
+            {% include 'layouts/partial/footer.html' %}
+            <!--=================(Footer End) =======================-->
+            <!--=====================================================-->
+        </div>
+
+
+
+
+
+
+        <!--=================(Them Settings Start) ==================-->
+        <!--=========================================================-->
+        {% include 'layouts/setting.html' %}
+        <!--=================(Them Settings End) ===================-->
+        <!--=========================================================-->
+
+    </div>
+
+
+
+    <!--=========================(Scripts Start) ==========================-->
+    <!--===================================================================-->
+
+    <!--   Core JS Files   -->
+    <script src="{% static 'assets/js/core/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/core/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/core/bootstrap.min.js' %}"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="{% static 'assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js' %}"></script>
+
+    <!-- Chart JS -->
+    <script src="{% static 'assets/js/plugin/chart.js/chart.min.js' %}"></script>
+
+    <!-- jQuery Sparkline -->
+    <script src="{% static 'assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js' %}"></script>
+
+    <!-- Chart Circle -->
+    <script src="{% static 'assets/js/plugin/chart-circle/circles.min.js' %}"></script>
+
+    <!-- Datatables -->
+    <script src="{% static 'assets/js/plugin/datatables/datatables.min.js' %}"></script>
+
+    <!-- Bootstrap Notify -->
+    <script src="{% static 'assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js' %}"></script>
+
+    <!-- jQuery Vector Maps -->
+    <script src="{% static 'assets/js/plugin/jsvectormap/jsvectormap.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/jsvectormap/world.js' %}"></script>
+
+    <!-- Sweet Alert -->
+    <!-- <script src="{% static 'assets/js/plugin/sweetalert/sweetalert.min.js' %}"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <script>
+        window.appConfig = {
+            accessToken: JSON.parse("{{ jwt_access_token|escapejs }}"),
+            userId: JSON.parse("{{ request.user.id|escapejs }}")
+        };
+    </script>
+
+    <!-- Vue.js & Axios -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link href="https://unpkg.com/@vueform/multiselect/themes/default.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@vueform/multiselect"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Select2 JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script>
+        // Toastr configuration
+        toastr.options = {
+            closeButton: true,
+            progressBar: true,
+            positionClass: 'toast-bottom-right',
+            timeOut: 5000, // 5 seconds
+            extendedTimeOut: 1000,
+        };
+    </script>
+
+
+
+    {% block js %} {% endblock js %}
+
+
+    <!-- Kaiadmin JS -->
+    <script src="{% static 'assets/js/kaiadmin.min.js' %}"></script>
+    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+    <script src="{% static 'assets/js/setting-demo.js' %}"></script>
+    <!-- <script src="{% static 'assets/js/demo.js' %}"></script> -->
+
+    <!--=========================(Scripts End) ============================-->
+    <!--===================================================================-->
+</body>
+
+</html>

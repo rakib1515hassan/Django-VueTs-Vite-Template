@@ -1,0 +1,301 @@
+/* ================ TABLE CONTAINER ================ */
+.custom-responsive-table {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    margin: 1rem 0;
+  }
+  
+  .details-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #2d3748;
+  }
+  
+  /* ================ BASE TABLE STYLES ================ */
+  .tailwind-table-responsive {
+    width: 100%;
+    font-size: 12px;
+    table-layout: auto;
+    border-collapse: collapse;
+    white-space: nowrap;
+  }
+  
+  .tailwind-table-border {
+    border: 1px solid #e5e7eb;
+  }
+  
+  /* ================ TABLE HEAD ================ */
+  .tailwind-table-head {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    background-color: #294365;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  /* ================ TABLE CELLS ================ */
+  .tailwind-table-cell {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+  }
+  
+  /* ================ TABLE ROWS ================ */
+  .tailwind-table-body-row {
+    transition: background-color 0.2s ease;
+  }
+  
+  .tailwind-table-body-row:hover {
+    background-color: #f8fafc;
+  }
+  
+  /* ================ ACTION BUTTONS ================ */
+  .action-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .action-btn {
+    width: clamp(25px, 3vw, 30px);
+    height: clamp(25px, 3vw, 30px);
+    min-width: 25px;
+    min-height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .action-btn i {
+    font-size: 12px;
+    transition: all 0.2s ease;
+  }
+  
+  .add-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .remove-btn {
+    background-color: #F44336;
+    color: white;
+  }
+  
+  .action-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .action-btn:hover i {
+    font-size: 14px;
+  }
+  
+  /* ================ INPUT FIELDS ================ */
+  /* .tailwind-table-cell input[type="text"] {
+    width: 100%;
+    padding: 0.375rem 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 12px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .tailwind-table-cell input[type="text"]:focus {
+    outline: none;
+    border-color: #294365;
+    box-shadow: 0 0 0 1px #294365;
+  } */
+  
+  /* ================ SELECT BOXES ================ */
+  .tailwind-table-cell .custom-select-wrapper {
+    width: 100% !important;
+    /* min-width: 120px; */
+  }
+  
+  /* ================ MIN-WIDTH UTILITIES ================ */
+  .min-w-40px { min-width: 40px !important; }
+  .min-w-60px { min-width: 60px !important; }
+  .min-w-100px { min-width: 100px !important; }
+  .min-w-120px { min-width: 120px !important; }
+  .min-w-150px { min-width: 150px !important; }
+  .min-w-200px { min-width: 200px !important; }
+  .min-w-250px { min-width: 250px !important; }
+  .min-w-300px { min-width: 300px !important; }
+  .min-w-400px { min-width: 400px !important; }
+  
+  /* ================ RESPONSIVE ADJUSTMENTS ================ */
+  @media (max-width: 1024px) {
+    .tailwind-table-head {
+      padding: 0.75rem;
+      font-size: 11px;
+    }
+    
+    .tailwind-table-cell {
+      padding: 0.5rem;
+      font-size: 11px;
+    }
+    
+    .min-w-250px { min-width: 200px !important; }
+    .min-w-200px { min-width: 150px !important; }
+  }
+  
+  @media (max-width: 768px) {
+    .details-title {
+      font-size: 16px;
+    }
+    
+    .tailwind-table-responsive {
+      font-size: 11px;
+    }
+    
+    /* .tailwind-table-cell input[type="text"] {
+      padding: 0.25rem 0.375rem;
+      font-size: 11px;
+    } */
+    
+    .action-btn {
+      width: 28px;
+      height: 28px;
+    }
+    
+    .min-w-250px { min-width: 180px !important; }
+    .min-w-200px { min-width: 120px !important; }
+    .min-w-150px { min-width: 100px !important; }
+    .min-w-100px { min-width: 80px !important; }
+  }
+  
+  @media (max-width: 480px) {
+    .details-title {
+      font-size: 15px;
+    }
+    
+    .tailwind-table-head {
+      padding: 0.5rem;
+      font-size: 10px;
+    }
+    
+    .tailwind-table-cell {
+      padding: 0.375rem;
+      font-size: 10px;
+    }
+    
+    .action-btn {
+      width: 26px;
+      height: 26px;
+    }
+    
+    .action-btn i {
+      font-size: 10px;
+    }
+    
+    .min-w-250px { min-width: 250px !important; }
+    .min-w-200px { min-width: 200px !important; }
+    
+    /* Hide less important columns on very small screens */
+    .tailwind-table-cell:nth-child(5), /* Custom Value */
+    .tailwind-table-cell:nth-child(6) { /* Weight */
+      display: none;
+    }
+    
+    .tailwind-table-head:nth-child(5),
+    .tailwind-table-head:nth-child(6) {
+      display: none;
+    }
+  }
+  
+  /* ================ PRINT STYLES ================ */
+  @media print {
+    .custom-responsive-table {
+      overflow-x: visible;
+    }
+    
+    .tailwind-table-responsive {
+      white-space: normal;
+      font-size: 10pt;
+    }
+    
+    .action-btn-container {
+      display: none;
+    }
+  }
+
+
+
+  /* ============== Pagination ==================== */
+  /* For Pagination */
+/* General container styling */
+.pagination-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* All buttons */
+.pagination-container button {
+    background-color: #f3f4f6;
+    /* light gray */
+    color: #374151;
+    /* gray-700 */
+    border: 1px solid #d1d5db;
+    /* gray-300 */
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.375rem;
+    /* rounded-md */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Hover effect */
+/* .pagination-container button:hover:not(:disabled) {
+    background-color: #e5e7eb;
+} */
+
+/* Hover effect excluding active and disabled buttons */
+.pagination-container button:hover:not(:disabled):not(.active) {
+    background-color: #e5e7eb;
+}
+
+
+/* Disabled button */
+.pagination-container button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Active page button */
+.pagination-container button.active {
+    background-color: #2a4365;
+    /* blue-500 */
+    color: white;
+    border-color: #2a4365;
+}
+
+/* Page numbers group */
+.pagination-pages {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.btn_hover{
+    cursor: pointer;
+}
+
+.btn_hover:hover i {
+    font-size: 30px !important;
+    transition: all 0.2s ease-in-out;
+}

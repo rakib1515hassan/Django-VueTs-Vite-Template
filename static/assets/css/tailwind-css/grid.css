@@ -1,0 +1,102 @@
+/* Grid Container Classes */
+.grid { display: grid !important; }
+.inline-grid { display: inline-grid !important; }
+
+/* Grid Template Columns */
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+.grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
+.grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; }
+.grid-cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)) !important; }
+.grid-cols-8 { grid-template-columns: repeat(8, minmax(0, 1fr)) !important; }
+.grid-cols-9 { grid-template-columns: repeat(9, minmax(0, 1fr)) !important; }
+.grid-cols-10 { grid-template-columns: repeat(10, minmax(0, 1fr)) !important; }
+.grid-cols-11 { grid-template-columns: repeat(11, minmax(0, 1fr)) !important; }
+.grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)) !important; }
+
+/* Grid Template Rows */
+.grid-rows-1 { grid-template-rows: repeat(1, minmax(0, 1fr)) !important; }
+.grid-rows-2 { grid-template-rows: repeat(2, minmax(0, 1fr)) !important; }
+.grid-rows-3 { grid-template-rows: repeat(3, minmax(0, 1fr)) !important; }
+.grid-rows-4 { grid-template-rows: repeat(4, minmax(0, 1fr)) !important; }
+.grid-rows-5 { grid-template-rows: repeat(5, minmax(0, 1fr)) !important; }
+.grid-rows-6 { grid-template-rows: repeat(6, minmax(0, 1fr)) !important; }
+
+/* Grid Template Areas */
+.grid-areas { grid-template-areas: unset !important; }
+
+/* Gap Classes */
+.gap-0 { gap: 0 !important; }
+.gap-1 { gap: 0.25rem !important; }
+.gap-2 { gap: 0.5rem !important; }
+.gap-3 { gap: 0.75rem !important; }
+.gap-4 { gap: 1rem !important; }
+.gap-5 { gap: 1.25rem !important; }
+.gap-6 { gap: 1.5rem !important; }
+.gap-8 { gap: 2rem !important; }
+.gap-10 { gap: 2.5rem !important; }
+.gap-12 { gap: 3rem !important; }
+.gap-16 { gap: 4rem !important; }
+.gap-20 { gap: 5rem !important; }
+.gap-24 { gap: 6rem !important; }
+.gap-32 { gap: 8rem !important; }
+
+/* Justify Items */
+.justify-items-start { justify-items: start !important; }
+.justify-items-end { justify-items: end !important; }
+.justify-items-center { justify-items: center !important; }
+.justify-items-stretch { justify-items: stretch !important; }
+
+/* Align Items */
+.align-items-start { align-items: start !important; }
+.align-items-end { align-items: end !important; }
+.align-items-center { align-items: center !important; }
+.align-items-stretch { align-items: stretch !important; }
+
+/* Justify Content */
+.justify-content-start { justify-content: start !important; }
+.justify-content-end { justify-content: end !important; }
+.justify-content-center { justify-content: center !important; }
+.justify-content-between { justify-content: space-between !important; }
+.justify-content-around { justify-content: space-around !important; }
+.justify-content-evenly { justify-content: space-evenly !important; }
+
+/* Align Content */
+.align-content-start { align-content: start !important; }
+.align-content-end { align-content: end !important; }
+.align-content-center { align-content: center !important; }
+.align-content-between { align-content: space-between !important; }
+.align-content-around { align-content: space-around !important; }
+.align-content-stretch { align-content: stretch !important; }
+
+/* Grid Column Span */
+.col-span-1 { grid-column: span 1 / span 1 !important; }
+.col-span-2 { grid-column: span 2 / span 2 !important; }
+.col-span-3 { grid-column: span 3 / span 3 !important; }
+.col-span-4 { grid-column: span 4 / span 4 !important; }
+.col-span-5 { grid-column: span 5 / span 5 !important; }
+.col-span-6 { grid-column: span 6 / span 6 !important; }
+.col-span-7 { grid-column: span 7 / span 7 !important; }
+.col-span-8 { grid-column: span 8 / span 8 !important; }
+.col-span-9 { grid-column: span 9 / span 9 !important; }
+.col-span-10 { grid-column: span 10 / span 10 !important; }
+.col-span-11 { grid-column: span 11 / span 11 !important; }
+.col-span-12 { grid-column: span 12 / span 12 !important; }
+
+/* Grid Row Span */
+.row-span-1 { grid-row: span 1 / span 1 !important; }
+.row-span-2 { grid-row: span 2 / span 2 !important; }
+.row-span-3 { grid-row: span 3 / span 3 !important; }
+.row-span-4 { grid-row: span 4 / span 4 !important; }
+.row-span-5 { grid-row: span 5 / span 5 !important; }
+.row-span-6 { grid-row: span 6 / span 6 !important; }
+
+/* Auto Columns */
+.auto-cols-auto { grid-auto-columns: auto !important; }
+.auto-cols-fr { grid-auto-columns: 1fr !important; }
+
+/* Auto Rows */
+.auto-rows-auto { grid-auto-rows: auto !important; }
+.auto-rows-fr { grid-auto-rows: 1fr !important; }

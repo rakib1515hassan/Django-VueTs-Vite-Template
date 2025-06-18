@@ -1,0 +1,77 @@
+/* Border Width */
+.border-0 { border-width: 0 !important; }
+.border-2 { border-width: 2px !important; }
+.border-4 { border-width: 4px !important; }
+.border-8 { border-width: 8px !important; }
+
+/* Border Color */
+.border-transparent { border-color: transparent !important; }
+.border-black { border-color: #000 !important; }
+.border-white { border-color: #fff !important; }
+.border-gray-100 { border-color: #f1f5f9 !important; }
+.border-gray-200 { border-color: #e5e7eb !important; }
+.border-gray-300 { border-color: #d1d5db !important; }
+.border-gray-400 { border-color: #9ca3af !important; }
+.border-gray-500 { border-color: #6b7280 !important; }
+.border-gray-600 { border-color: #4b5563 !important; }
+.border-gray-700 { border-color: #374151 !important; }
+.border-gray-800 { border-color: #1f2937 !important; }
+.border-gray-900 { border-color: #111827 !important; }
+/* Add more colors as needed, using Tailwind's predefined color palette */
+
+/* Border Radius */
+.rounded-0 { border-radius: 0 !important; }
+.rounded-sm { border-radius: 0.125rem !important; }
+.rounded { border-radius: 0.25rem !important; }
+.rounded-md { border-radius: 0.375rem !important; }
+.rounded-lg { border-radius: 0.5rem !important; }
+.rounded-xl { border-radius: 0.75rem !important; }
+.rounded-2xl { border-radius: 1rem !important; }
+.rounded-3xl { border-radius: 1.5rem !important; }
+.rounded-full { border-radius: 9999px !important; }
+
+/* Border Style */
+.border-solid { border-style: solid !important; }
+.border-dashed { border-style: dashed !important; }
+.border-dotted { border-style: dotted !important; }
+.border-double { border-style: double !important; }
+.border-none { border-style: none !important; }
+
+/* Border Opacity */
+/* .border-opacity-0 { border-opacity: 0 !important; }
+.border-opacity-25 { border-opacity: 0.25 !important; }
+.border-opacity-50 { border-opacity: 0.5 !important; }
+.border-opacity-75 { border-opacity: 0.75 !important; }
+.border-opacity-100 { border-opacity: 1 !important; } */
+
+/* Border Color with Opacity */
+.border-opacity-0 { border-color: rgba(0, 0, 0, 0) !important; }
+.border-opacity-25 { border-color: rgba(0, 0, 0, 0.25) !important; }
+.border-opacity-50 { border-color: rgba(0, 0, 0, 0.5) !important; }
+.border-opacity-75 { border-color: rgba(0, 0, 0, 0.75) !important; }
+.border-opacity-100 { border-color: rgba(0, 0, 0, 1) !important; }
+
+/* Border Sides (Top, Right, Bottom, Left) */
+.border-t-0 { border-top-width: 0 !important; }
+.border-t-2 { border-top-width: 2px !important; }
+.border-t-4 { border-top-width: 4px !important; }
+.border-t-8 { border-top-width: 8px !important; }
+
+.border-r-0 { border-right-width: 0 !important; }
+.border-r-2 { border-right-width: 2px !important; }
+.border-r-4 { border-right-width: 4px !important; }
+.border-r-8 { border-right-width: 8px !important; }
+
+.border-b-0 { border-bottom-width: 0 !important; }
+.border-b-2 { border-bottom-width: 2px !important; }
+.border-b-4 { border-bottom-width: 4px !important; }
+.border-b-8 { border-bottom-width: 8px !important; }
+
+.border-l-0 { border-left-width: 0 !important; }
+.border-l-2 { border-left-width: 2px !important; }
+.border-l-4 { border-left-width: 4px !important; }
+.border-l-8 { border-left-width: 8px !important; }
+
+/* Border Collapse (for tables) */
+.border-collapse { border-collapse: collapse !important; }
+.border-separate { border-collapse: separate !important; }

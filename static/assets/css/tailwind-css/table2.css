@@ -1,0 +1,222 @@
+/* ================ TABLE CONTAINER ================ */
+.custom-responsive-table{
+    overflow-x: auto; 
+    /* overflow-y: hidden; */
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* ================ BASE TABLE STYLES ================ */
+.tailwind-table-responsive {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+
+
+/* ================ Table Layout ================ */
+.tailwind-table { display: table !important; }
+.tailwind-table-auto { table-layout: auto !important; }
+.tailwind-table-fixed { table-layout: fixed !important; }
+
+/* Table Border */
+.tailwind-border-collapse { border-collapse: collapse !important; }
+.tailwind-border-separate { border-collapse: separate !important; }
+
+/* Table Borders */
+.tailwind-table-border { border: 1px solid #e5e7eb !important; }
+.tailwind-table-border-collapse { border-collapse: collapse !important; }
+
+/* Table Padding */
+.tailwind-table-cell { padding: 0.75rem !important; }
+.tailwind-table-head { padding: 1rem !important; }
+
+/* Table Stripe (Alternating Row Colors) */
+.tailwind-striped tbody tr:nth-child(odd) { background-color: #f9fafb !important; }
+
+/* Table Alignment */
+.tailwind-text-left { text-align: left !important; }
+.tailwind-text-center { text-align: center !important; }
+.tailwind-text-right { text-align: right !important; }
+
+
+/* ================ TABLE HEAD ================ */
+.tailwind-table-head th {
+    text-align: left !important;
+    font-weight: bold !important;
+    background-color: ##294365 !important; /* Updated to blue for better contrast */
+    color: white !important; /* Ensures text is readable on dark background */
+}
+
+/* Table Row */
+.tailwind-table-row {
+    display: table-row !important;
+}
+
+.tailwind-table-body-row {
+    display: table-row !important;
+    background-color: transparent !important;
+}
+
+.tailwind-table-body-row:hover { background-color: #f1f5f9 !important; } /* Subtle hover effect */
+
+/* Table Column */
+.tailwind-table-column { display: table-column !important; }
+
+/* ================ TABLE CELLS ================ */
+.tailwind-table-cell { display: table-cell !important; padding: 0.75rem !important; position: static !important;}
+
+
+
+
+
+
+/* Table Hover */
+.tailwind-table-hover tbody tr:hover { background-color: #e5e7eb !important; }
+
+/* Table Border Width */
+.tailwind-table-border-1 { border-width: 1px !important; }
+.tailwind-table-border-2 { border-width: 2px !important; }
+.tailwind-table-border-4 { border-width: 4px !important; }
+
+
+/* বিশেষভাবে টেবিলের ভিতরের সিলেক্টের জন্য */
+.tailwind-table-cell .custom-select-wrapper {
+position: static !important;
+}
+
+.tailwind-table-cell .custom-select-input {
+position: relative;
+z-index: 2;
+}
+
+
+/* ================ MIN-WIDTH UTILITIES ================ */
+.min-w-40px { min-width: 40px !important; }
+.min-w-60px { min-width: 60px !important; }
+.min-w-100px { min-width: 100px !important; }
+.min-w-120px { min-width: 120px !important; }
+.min-w-150px { min-width: 150px !important; }
+.min-w-200px { min-width: 200px !important; }
+.min-w-250px { min-width: 250px !important; }
+.min-w-300px { min-width: 300px !important; }
+.min-w-400px { min-width: 400px !important; }
+  
+
+/* For Pagination */
+/* General container styling */
+.pagination-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* All buttons */
+.pagination-container button {
+    background-color: #f3f4f6;
+    /* light gray */
+    color: #374151;
+    /* gray-700 */
+    border: 1px solid #d1d5db;
+    /* gray-300 */
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.375rem;
+    /* rounded-md */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Hover effect */
+/* .pagination-container button:hover:not(:disabled) {
+    background-color: #e5e7eb;
+} */
+
+/* Hover effect excluding active and disabled buttons */
+.pagination-container button:hover:not(:disabled):not(.active) {
+    background-color: #e5e7eb;
+}
+
+
+/* Disabled button */
+.pagination-container button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Active page button */
+.pagination-container button.active {
+    background-color: #2a4365;
+    /* blue-500 */
+    color: white;
+    border-color: #2a4365;
+}
+
+/* Page numbers group */
+.pagination-pages {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.btn_hover{
+    cursor: pointer;
+}
+
+.btn_hover:hover i {
+    font-size: 30px !important;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+
+/* Action buttons styling */
+.action-btn {
+    width: clamp(15px, 3vw, 20px);
+    height: clamp(15px, 3vw, 20px);
+    min-width: 15px;
+    min-height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.add-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #388E3C;
+}
+
+.remove-btn {
+    background-color: #F44336;
+    color: white;
+    border: 1px solid #D32F2F;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .action-btn {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
+
+
+
+
+
+
+
+

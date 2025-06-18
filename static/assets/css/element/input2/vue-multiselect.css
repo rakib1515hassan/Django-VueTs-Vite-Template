@@ -1,0 +1,17 @@
+.multiselect {
+    margin-top: 5px;
+    min-height: 43px;
+    border: 2px solid #dbdde1;
+    border-radius: 4px;
+    --ms-bg: #fff;
+    /* Background */
+    --ms-dropdown-bg: #ffffff;
+    /* Dropdown background */
+
+}
+
+.multiselect:focus-within {
+    border: 2px solid;
+    border-color: #372aac !important;
+    box-shadow: 0 0 5px 2px rgba(55, 42, 172, 0.5) !important;
+}

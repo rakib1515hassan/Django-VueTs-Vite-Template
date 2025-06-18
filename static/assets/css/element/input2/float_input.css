@@ -1,0 +1,90 @@
+.f-input-group {
+  position: relative;
+  /* margin: 15px 0; */ /* Grid এর ভেতর input use করলে এটি দেখার দরকার নেই */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.f-input-group input,
+.f-input-group textarea,
+.f-input-group select {
+  width: 100%;
+  padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+  font-size: var(--font-size-base);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: border-color var(--transition-speed),
+    box-shadow var(--transition-speed);
+}
+
+.f-input-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.f-input-group label {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  background: var(--background-color);
+  color: var(--clear-button-color); /* পূর্বে ছিল #888 */
+  font-size: var(--font-size-label);
+  padding: 0 4px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+/* ফোকাস বা ইনপুট ভ্যালু থাকলে লেবেল ফ্লোট করবে */
+.f-input-group input:focus + label,
+.f-input-group input:not(:placeholder-shown) + label,
+.f-input-group textarea:focus + label,
+.f-input-group textarea:not(:placeholder-shown) + label,
+.f-input-group select:focus + label,
+.f-input-group select:not([value=""]) + label {
+  top: -10px;
+  left: 8px;
+  font-size: var(--font-size-label-floating);
+  color: var(--primary-color);
+}
+
+/* ফোকাসে বর্ডার রং পরিবর্তন */
+.f-input-group input:focus,
+.f-input-group textarea:focus,
+.f-input-group select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px 1px var(--strong-select-focus-shadow);
+}
+
+/* Disabled State */
+.f-input-group input:disabled,
+.f-input-group textarea:disabled,
+.f-input-group select:disabled {
+  background-color: var(--disabled-bg-color);
+  cursor: not-allowed;
+  border-color: var(--disabled-border-color);
+}
+
+/* Error এবং Success স্টেটের জন্য */
+.f-input-group.error input,
+.f-input-group.error textarea,
+.f-input-group.error select {
+  border-color: var(--error-color);
+}
+
+.f-input-group.error label {
+  color: var(--error-color);
+}
+
+.f-input-group.success input,
+.f-input-group.success textarea,
+.f-input-group.success select {
+  border-color: var(--success-color);
+}
+
+.f-input-group.success label {
+  color: var(--success-color);
+}

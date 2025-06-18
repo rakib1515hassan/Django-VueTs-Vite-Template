@@ -1,0 +1,84 @@
+.static-label-group {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    min-width: 120px;
+  }
+  
+  .static-label-group label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #444;
+    font-size: 14px;
+  }
+  
+  .static-label-group input,
+  .static-label-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #dbdde1;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: inherit;
+    background-color: white;
+  }
+  
+  .static-label-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .static-label-group input:focus,
+  .static-label-group textarea:focus {
+    border-color: #372aac;
+  }
+  
+  /* Disabled State */
+  .static-label-group input:disabled,
+  .static-label-group textarea:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    border-color: #e0e0e0;
+  }
+  
+  /* Error State */
+  .static-label-group.error input,
+  .static-label-group.error textarea {
+    border-color: red;
+  }
+  
+  .static-label-group.error label {
+    color: red;
+  }
+  
+  /* Success State */
+  .static-label-group.success input,
+  .static-label-group.success textarea {
+    border-color: green;
+  }
+  
+  .static-label-group.success label {
+    color: green;
+  }
+  
+
+
+  .static-label-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #dbdde1;
+    border-radius: 4px;
+    background-color: white;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: inherit;
+    appearance: none;
+  }
+  
+  .static-label-group select:focus {
+    border-color: #372aac;
+  }
+  

@@ -1,0 +1,376 @@
+.custom-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  letter-spacing: 0.5px;
+  gap: 8px;
+}
+
+.custom-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.custom-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-btn:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+.custom-btn i {
+  font-size: 16px;
+}
+
+/* Button Variants */
+.custom-btn.save {
+  background-color: #2563eb;
+}
+.custom-btn.save:hover {
+  background-color: #1e40af;
+}
+
+.custom-btn.create {
+  background-color: #10b981;
+}
+.custom-btn.create:hover {
+  background-color: #059669;
+}
+
+.custom-btn.cancel {
+  background-color: #6b7280;
+}
+.custom-btn.cancel:hover {
+  background-color: #4b5563;
+}
+
+.custom-btn.delete {
+  background-color: #ef4444;
+}
+.custom-btn.delete:hover {
+  background-color: #dc2626;
+}
+
+.custom-btn.info {
+  background-color: #2B7FFF;
+}
+.custom-btn.info:hover {
+  background-color: #0084D1;
+}
+
+/* Outline buttons */
+.custom-btn.outline {
+  background-color: transparent;
+  color: #333;
+  border: 2px solid;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.custom-btn.outline:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Specific Outlines */
+.custom-btn.outline.save {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+.custom-btn.outline.save:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.custom-btn.outline.create {
+  border-color: #10b981;
+  color: #10b981;
+}
+.custom-btn.outline.create:hover {
+  background-color: #10b981;
+  color: white;
+}
+
+.custom-btn.outline.cancel {
+  border-color: #6b7280;
+  color: #6b7280;
+}
+.custom-btn.outline.cancel:hover {
+  background-color: #6b7280;
+  color: white;
+}
+
+.custom-btn.outline.delete {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+.custom-btn.outline.delete:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Example: Out line */
+/* 
+<button class="custom-btn outline save me-4">
+    Save
+    <i class="fa-solid fa-floppy-disk"></i>
+</button>
+
+<button class="custom-btn outline create me-4">
+    Create
+    <i class="fa-solid fa-plus"></i>
+</button>
+
+<button class="custom-btn outline cancel me-4">
+    Cancel
+    <i class="fa-solid fa-xmark"></i>
+</button>
+
+<button class="custom-btn outline delete me-4">
+    Delete
+    <i class="fa-solid fa-trash"></i>
+</button>
+*/
+
+/* Button Size */
+/* Default = md size */
+.custom-btn {
+  font-size: 14px;
+  padding: 10px 24px;
+}
+
+/* Small Button */
+.custom-btn.sm {
+  font-size: 12px;
+  padding: 6px 16px;
+}
+
+/* Large Button */
+.custom-btn.lg {
+  font-size: 16px;
+  padding: 12px 28px;
+}
+
+/* Extra Large Button */
+.custom-btn.xl {
+  font-size: 18px;
+  padding: 14px 32px;
+}
+
+/* Extra Extra Large Button */
+.custom-btn.xxl {
+  font-size: 20px;
+  padding: 16px 36px;
+}
+
+/* Example: Button Size  */
+/* 
+<!-- Small Button -->
+<button class="custom-btn save sm me-4">
+    Save
+    <i class="fa-solid fa-floppy-disk"></i>
+</button>
+
+<!-- Medium (Default) -->
+<button class="custom-btn create me-4">
+    Create
+    <i class="fa-solid fa-plus"></i>
+</button>
+
+<!-- Large Button -->
+<button class="custom-btn cancel lg me-4">
+    Cancel
+    <i class="fa-solid fa-xmark me-4"></i>
+</button>
+
+<!-- Extra Large Button -->
+<button class="custom-btn delete xl me-4">
+    Delete
+    <i class="fa-solid fa-trash"></i>
+</button>
+
+<!-- Extra Extra Large Button -->
+<button class="custom-btn save xxl me-4">
+    Save XXL
+    <i class="fa-solid fa-floppy-disk"></i>
+</button>
+*/
+
+
+
+
+
+
+
+/* Base toggle style */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+
+.switch-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #d1d5db;
+  border-radius: 9999px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.switch-handle {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.25, 1.5, 0.5, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon styles */
+.switch-handle i {
+  font-size: 0.75em;
+  color: #6b7280;
+  transition: opacity 0.2s ease;
+}
+.icon-on {
+  display: none;
+}
+.icon-off {
+  display: inline;
+}
+
+/* ON State */
+.toggle-switch input:checked + .switch-track {
+  background-color: var(--toggle-color, #2563eb);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.toggle-switch input:checked + .switch-track .switch-handle {
+  transform: translate(calc(var(--toggle-move, 30px)), -50%);
+}
+.toggle-switch input:checked + .switch-track .icon-on {
+  display: inline;
+  color: var(--toggle-color, #2563eb);
+}
+.toggle-switch input:checked + .switch-track .icon-off {
+  display: none;
+}
+
+/* Size Variants */
+.toggle-switch.sm { width: 42px; height: 22px; --toggle-move: 20px; }
+.toggle-switch.sm .switch-handle { width: 16px; height: 16px; }
+
+.toggle-switch.md { width: 60px; height: 30px; --toggle-move: 30px; }
+.toggle-switch.md .switch-handle { width: 24px; height: 24px; }
+
+.toggle-switch.lg { width: 80px; height: 40px; --toggle-move: 40px; }
+.toggle-switch.lg .switch-handle { width: 34px; height: 34px; }
+
+.toggle-switch.xl { width: 100px; height: 50px; --toggle-move: 50px; }
+.toggle-switch.xl .switch-handle { width: 44px; height: 44px; }
+
+.toggle-switch.xxl { width: 120px; height: 60px; --toggle-move: 60px; }
+.toggle-switch.xxl .switch-handle { width: 54px; height: 54px; }
+
+/* Color Variants */
+.toggle-switch.blue { --toggle-color: #2563eb; }
+.toggle-switch.green { --toggle-color: #10b981; }
+.toggle-switch.red { --toggle-color: #ef4444; }
+.toggle-switch.gray { --toggle-color: #6b7280; }
+.toggle-switch.purple { --toggle-color: #8b5cf6; }
+
+
+/* 
+<div>
+<!-- Here use button color (blue, green, red, gray, purple) and size (sm, md, lg, xl, xxl) -->
+  <!-- Professional Blue Toggle, Medium Size -->
+  <label class="toggle-switch pro-toggle green md">
+      <input type="checkbox" />
+      <div class="switch-track">
+          <div class="switch-handle">
+              <!-- Check / Cross -->
+              <!-- <i class="fa-solid fa-check icon-on"></i>
+              <i class="fa-solid fa-xmark icon-off"></i> -->
+
+              <!-- Moon / Sun -->
+              <!-- <i class="fa-solid fa-moon icon-on"></i>
+              <i class="fa-solid fa-sun icon-off"></i> -->
+
+              <!-- Play / Pause -->
+              <!-- <i class="fa-solid fa-play icon-on"></i>
+              <i class="fa-solid fa-pause icon-off"></i> -->
+
+              <span class="icon-on" style="font-size: 10px; font-weight: bold;">ON</span>
+              <span class="icon-off" style="font-size: 8px;">OFF</span>
+
+              <span class="icon-on" style="font-size: 12px; font-weight: bold;">✔</span>
+              <span class="icon-off" style="font-size: 12px;">✖</span>
+          </div>
+      </div>
+  </label>
+</div>
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button-group-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  /* make it responsive */
+  gap: 10px;
+  justify-content: flex-end;
+  /* align buttons to right */
+}
+
+@media (max-width: 768px) {
+  .button-group-responsive {
+      justify-content: center;
+  }
+
+  .button-group-responsive button {
+      width: 100%;
+      min-width: unset;
+  }
+}

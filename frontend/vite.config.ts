@@ -1,48 +1,63 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-
 import path from "path";
-
 import { fileURLToPath, URL } from "node:url";
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
-  // base: "/static/vue/", // এটা দিলে vue http://localhost:5173/static/vue/ এই ভাবে run হবে।
-
   plugins: [vue()],
 
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
+      "@dashboard": path.resolve(__dirname, "../../apps/dashboard/assets/js"),
       vue: "vue/dist/vue.esm-bundler.js",
     },
+    extensions: [".ts", ".js", ".vue", ".json"],
   },
 
   css: {
     postcss: "./postcss.config.js",
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/assets/scss/variables.scss";`,
+      },
+    },
   },
 
   build: {
-    outDir: path.resolve(__dirname, "../static/vue"), // <-- output in Django static
+    outDir: path.resolve(__dirname, "../static/vue"),
     emptyOutDir: true,
+    manifest: true,
     cssCodeSplit: false,
     assetsDir: "assets",
-    manifest: true,
     rollupOptions: {
-      input: path.resolve(__dirname, "src/main.js"),
+      input: path.resolve(__dirname, "src/main.ts"),
       output: {
-        entryFileNames: "assets/main.js",
+        entryFileNames: "assets/[name].js",
         chunkFileNames: "assets/[name].js",
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name && assetInfo.name.endsWith(".css")) {
-            return "assets/style.css";
+          if (assetInfo.name && /\.(css|scss|sass)$/.test(assetInfo.name)) {
+            return "assets/css/[name].[ext]";
           }
-          return "assets/[name][extname]";
+          if (
+            assetInfo.name &&
+            /\.(png|jpe?g|gif|svg|webp|avif)$/.test(assetInfo.name)
+          ) {
+            return "assets/images/[name].[ext]";
+          }
+          if (
+            assetInfo.name &&
+            /\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name)
+          ) {
+            return "assets/fonts/[name].[ext]";
+          }
+          return "assets/[name].[ext]";
         },
       },
     },
   },
-  
+
   server: {
     host: "localhost",
     port: 5173,
@@ -52,5 +67,14 @@ export default defineConfig({
       host: "localhost",
       port: 5173,
     },
+    watch: {
+      usePolling: true,
+      interval: 100,
+    },
+  },
+
+  optimizeDeps: {
+    include: ["vue", "@vue/runtime-core", "@vue/shared"],
+    exclude: ["vue-demi"],
   },
 });

@@ -1,0 +1,154 @@
+/* ========== Select2 Integration ========== */
+.select2-container--default .select2-selection--single {
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+  font-size: var(--font-size-base);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+}
+
+/* Search Input এর Font Size বাড়াও */
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  font-size: var(--font-size-search-input);
+  padding: 4px;
+}
+
+/* Optional – Dropdown Option এর Font Size বাড়াতে চাইলে */
+.select2-container--default .select2-results__option {
+  font-size: var(--font-size-dropdown-option);
+}
+
+/* Clear (×) button */
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__clear {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: var(--clear-button-color);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__clear:hover {
+  color: var(--primary-color) !important;
+}
+
+/* ========== Base Float Input Group ========== */
+.f-input-group .select2-container--default .select2-selection--single {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--input-padding-horizontal);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-speed);
+  box-sizing: border-box;
+  background-color: var(--background-color);
+}
+
+.f-input-group
+  .select2-container--default.select2-container--focus
+  .select2-selection--single {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 5px 1px var(--strong-select-focus-shadow) !important;
+}
+
+.f-input-group.select2-focused label,
+.f-input-group label.floating {
+  top: -10px;
+  left: 8px;
+  font-size: var(--font-size-label-floating);
+  color: var(--primary-color);
+}
+
+.f-input-group label {
+  z-index: 5;
+}
+
+/* ========== Custom Input Group Layout ========== */
+.c-input-group {
+  display: flex;
+  flex-direction: column;
+  /* gap: 6px;
+  margin-bottom: 10px; */
+}
+
+/* Label style */
+.c-input-group label {
+  font-size: var(--font-size-base);
+  color: var(--label-color);
+  font-weight: 500;
+}
+
+/* Input & Textarea Style */
+.c-input-group input,
+.c-input-group textarea {
+  width: 100%;
+  padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+  font-size: var(--font-size-base);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  transition: border-color var(--transition-speed) ease;
+}
+
+.c-input-group input:focus,
+.c-input-group textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 5px 1px var(--input-focus-shadow);
+}
+
+/* Select2 container style inside c-input-group */
+.c-input-group .select2-container--default .select2-selection--single {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--input-padding-horizontal);
+  font-size: var(--font-size-base);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+  transition: border-color var(--transition-speed) ease;
+  box-sizing: border-box;
+}
+
+/* Focused select2 inside c-input-group */
+.c-input-group
+  .select2-container--default.select2-container--focus
+  .select2-selection--single {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px 1px var(--select-focus-shadow);
+}
+
+/* Clear (×) button inside c-input-group */
+.c-input-group
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__clear {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: var(--clear-button-color);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.c-input-group
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__clear:hover {
+  color: var(--primary-color);
+}

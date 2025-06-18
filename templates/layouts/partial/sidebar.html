@@ -1,0 +1,77 @@
+{% load nav_active %}
+{% load static %}
+
+<div class="sidebar" data-background-color="dark">
+
+    <div class="sidebar-logo">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="dark">
+            <a href="" class="logo">
+                <img src="{% static 'assets/logo/demo_logo.png' %}" alt="navbar brand" class="navbar-brand" height="40"
+                    width="40" />
+                <p class=""
+                    style="color: white; display: flex; flex-direction: column; margin-top: 5px; line-height: 1; margin-left: 5px;">
+                    <span style="font-size: 16px;">TSMC</span>
+                </p>
+            </a>
+            <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar">
+                    <i class="gg-menu-right"></i>
+                </button>
+                <button class="btn btn-toggle sidenav-toggler">
+                    <i class="gg-menu-left"></i>
+                </button>
+            </div>
+            <button class="topbar-toggler more">
+                <i class="gg-more-vertical-alt"></i>
+            </button>
+        </div>
+        <!-- End Logo Header -->
+    </div>
+
+
+    <div class="sidebar-wrapper scrollbar scrollbar-inner">
+        <div class="sidebar-content">
+            <ul class="nav nav-secondary">
+                <!-- Dashboard -->
+                <li class="nav-item {% active_class 'auth:home' %}">
+                    <a href="" class="collapsed" aria-expanded="false">
+                        <i class="fas fa-home"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+
+
+                <li class="nav-section">
+                    <span class="sidebar-mini-icon">
+                        <i class="fa fa-ellipsis-h"></i>
+                    </span>
+                    <h4 class="text-section">Section</h4>
+                </li>
+
+                <li class="nav-item ">
+                    <a data-bs-toggle="collapse" href="#inbound">
+                        <i class="fas fa-layer-group"></i>
+                        <p>Admin</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse " id="inbound">
+                        <ul class="nav nav-collapse">
+                            <li class="">
+                                <a href="">
+                                    <span class="sub-item">List</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Report</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,139 @@
+.detail-section {
+    margin-bottom: 5px;
+}
+
+.detail-section h5 {
+    color: #4b7bec;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.details-title{
+    color: #4b7bec;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.detail-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.detail-item {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    padding: 0 15px;
+    margin-bottom: 5px;
+}
+
+.detail-label {
+    font-size: 13px;
+    color: #6c757d;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* .detail-value {
+    font-size: 15px;
+    font-weight: 500;
+    color: #343a40;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+} */
+
+.detail-value {
+    font-size: 15px;
+    font-weight: 500;
+    color: #343a40;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start; 
+    word-break: break-word;
+}
+
+.detail-value span {
+    display: block; 
+    line-height: 1.4; 
+}
+
+.detail-value span:not(:last-child) {
+    margin-bottom: 4px; 
+}
+
+.details-inpute {
+    margin-top: 23px;
+}
+
+/* কলাম স্প্যান ক্লাসগুলি */
+.detail-item.col-span-1 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+}
+
+.detail-item.col-span-2 {
+    flex: 0 0 66.666%;
+    max-width: 66.666%;
+}
+
+.detail-item.col-span-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* রেস্পন্সিভ স্টাইলগুলি */
+@media (max-width: 992px) {
+    .detail-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    /* মাঝারি স্ক্রিনে কলাম স্প্যান ওভাররাইড */
+    .detail-item.col-span-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    /* ছোট স্ক্রিনে সব কলাম ফুল প্রস্থ */
+    .detail-item.col-span-1,
+    .detail-item.col-span-2,
+    .detail-item.col-span-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* @media (max-width: 992px) {
+    .detail-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+} */

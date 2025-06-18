@@ -1,0 +1,92 @@
+:root {
+  /* Main Theme Colors */
+  --primary-color: #372aac;
+  --border-color: #dbdde1;
+  --label-color: #333;
+  --error-color: #e74c3c;
+  --success-color: green;
+
+  /* Background & Clear Button */
+  --background-color: white;
+  --clear-button-color: #888;
+
+  /* Disabled States */
+  --disabled-bg-color: #f5f5f5;
+  --disabled-border-color: #e0e0e0;
+
+  /* Font Sizes */
+  --font-size-base: 13px;
+  --font-size-label: 16px;
+  --font-size-label-floating: 12px;
+  --font-size-dropdown-option: 12px;
+  --font-size-search-input: 12px;
+
+  /* Radius & Padding */
+  --border-radius: 4px;
+  --input-padding-horizontal: 8px;
+  --input-padding-vertical: 10px;
+
+  /* Shadows */
+  --input-focus-shadow: rgba(55, 42, 172, 0.15);
+  --input-error-shadow: rgba(231, 76, 60, 0.5);
+  --select-focus-shadow: rgba(55, 42, 172, 0.3);
+  --strong-select-focus-shadow: rgba(55, 42, 172, 0.5);
+
+  /* Transition */
+  --transition-speed: 0.3s;
+
+  /* Vue 3 Multiselected */
+  --ms-border-color-active: #372aac;
+  --ms-ring-color: rgba(55, 42, 172, 0.5);
+}
+
+
+/* Common base styles for input, textarea, select */
+input,
+textarea,
+select {
+  width: 100%;
+  max-width: 100%;
+  padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+  font-size: var(--font-size-base);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+/* Focus State */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 5px 1px var(--strong-select-focus-shadow) !important;
+  outline: none;
+}
+
+/* Disabled State */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: var(--disabled-bg-color);
+  cursor: not-allowed;
+  border-color: var(--disabled-border-color);
+}
+
+
+input.is-invalid,
+select.is-invalid,
+textarea.is-invalid {
+  border-color: var(--error-color); 
+  box-shadow: 0 0 5px 1px var(--input-error-shadow) !important;
+}
+
+.validation-message {
+  color: var(--error-color);
+  font-size: 0.85em;
+  padding-left: 4px;
+  margin: 0px;
+}

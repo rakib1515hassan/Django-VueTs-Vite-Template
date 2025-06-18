@@ -1,0 +1,42 @@
+.c-input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  /* margin: 10px 0; */ /* Grid এর ভেতর input use করলে এটি দেখার দরকার নেই */
+  border: 1px solid transparent; /* debug করলে লাল দিতে পারো */
+}
+
+.c-input-group label {
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: var(--label-color); /* আগে #444 ছিল */
+  font-size: var(--font-size-base); /* আগে 14px ছিল */
+}
+
+.c-input-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Error & Success states */
+.c-input-group.error input,
+.c-input-group.error textarea,
+.c-input-group.error select {
+  border-color: var(--error-color); 
+  box-shadow: 0 0 5px 1px var(--input-error-shadow) !important;
+}
+
+.c-input-group.error label {
+  color: var(--error-color); /* আগে red ছিল */
+}
+
+.c-input-group.success input,
+.c-input-group.success textarea,
+.c-input-group.success select {
+  border-color: var(--success-color); /* আগে green ছিল */
+}
+
+.c-input-group.success label {
+  color: var(--success-color); /* আগে green ছিল */
+}

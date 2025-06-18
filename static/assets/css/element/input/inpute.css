@@ -1,0 +1,119 @@
+/* input.css — common base input styles for all types */
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #dbdde1;
+  border-radius: 4px;
+  background-color: white;
+  outline: none;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #372aac;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  border-color: #e0e0e0;
+}
+
+/* Grid Layout Container */
+.grid-input-container {
+  display: grid;
+  column-gap: 20px;
+  grid-auto-rows: minmax(60px, auto);
+  grid-template-columns: repeat(1, 1fr); /* Default for mobile */
+}
+
+/* Responsive Grid Columns */
+@media (min-width: 576px) {
+  .grid-input-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-input-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-input-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Grid Column Span Utilities */
+.col-span-1 {
+  grid-column: span 1;
+}
+.col-span-2 {
+  grid-column: span 2;
+}
+.col-span-3 {
+  grid-column: span 3;
+}
+.col-span-4 {
+  grid-column: span 4;
+}
+
+/* Grid Row Span Utilities */
+.row-span-1 {
+  grid-row: span 1;
+}
+.row-span-2 {
+  grid-row: span 2;
+}
+.row-span-3 {
+  grid-row: span 3;
+}
+
+/* Mobile Overrides: Make all full width */
+@media (max-width: 575.98px) {
+  .col-span-2,
+  .col-span-3,
+  .col-span-4 {
+    grid-column: span 1 !important;
+  }
+
+  .row-span-2,
+  .row-span-3 {
+    grid-row: span 1 !important;
+  }
+}
+
+
+/* Example */
+/* 
+<div class="grid-input-container">
+  <!-- Static Label Input -->
+  <div class="static-label-group col-span-2">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" placeholder="you@example.com" />
+  </div>
+
+  <!-- Floating Label Input -->
+  <div class="custom-input-group col-span-1">
+    <input type="text" id="name" placeholder=" " />
+    <label for="name">Full Name</label>
+  </div>
+
+  <!-- Another field with row span -->
+  <div class="static-label-group col-span-2 row-span-2">
+    <label for="message">Message</label>
+    <textarea id="message" placeholder="Write your message..."></textarea>
+  </div>
+</div>
+*/
